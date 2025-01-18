@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* colors */
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: #141414;
+
+    /* fonts */
+    --fw-rg: 500;
+    --fw-md: 600;
+    --fw-bld: 700;
+
+    --fs-100: 1rem;
+    --fs-200: 2rem;
+
+    --ff-default: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+html { font-size: 14px; }
+
+@media (min-width: 600px) {
+    html { font-size: 16px; }
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: inherit; /* set the font to default */
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff-default);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-rg    );
+    color: var(--white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    background-color: var(--grey-900);
+    text-align: center;
+}
+
+h1 { 
+    font-size: var(--fs-200); 
+    font-weight: var(--fw-bld);
+}
+
+ul { list-style-type: none;}
+
+/* global modifiers */
+
+.flex { display: flex; }
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col[data-spacing="small"],
+.flex[data-spacing="small"] {
+    gap: 0.5em;
+}
+
+.flex-col[data-spacing="medium"],
+.flex[data-spacing="medium"] {
+    gap: 1em;
+}
+
+.flex-col[data-spacing="large"],
+.flex[data-spacing="large"] {
+    gap: 1.3em;
+}
+
+.flex-col[data-align="center"],
+.flex[data-align="center"] {
+    align-items: center;
+}
+
+.flex-col[data-justify="center"],
+.flex[data-justify="center"] {
+    justify-content: center;
+}
+
+/* ****** */
+/* LAYOUT */
+/* ****** */
+
+.card {
+    background-color: var(--grey-800);
+    border-radius: 12px;
+    padding: 2.86em;
+}
+
+.profile {
+    border-radius: 100%;
+    margin: auto;
+}
+
+.address {
+    color: var(--green);
+    font-weight: var(--fw-md);
+}
+
+.links a {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--grey-700);
+    border-radius: 8px;
+    padding: 1em;
+    text-decoration: none;
+
+    font: inherit;
+    font-weight: var(--fw-md);
+    color: inherit;
+
+    transition: 0.3s all ease-in-out;
+}
+
+.links a:hover,
+.links a:focus {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+
